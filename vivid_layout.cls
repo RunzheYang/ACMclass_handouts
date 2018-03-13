@@ -56,7 +56,7 @@
 \RequirePackage{colortbl}	% Shade tables
 \RequirePackage{array}		% Align tabular cells
 \RequirePackage{amsmath}	% Refine equation environment
-\RequirePackage[hyperfootnotes=false, colorlinks=true, urlcolor=vividblue, linkcolor=vividgray]{hyperref}	% Add hyperlinks
+\RequirePackage[hyperfootnotes=false, colorlinks=true, urlcolor=vividred, linkcolor=vividgray]{hyperref}	% Add hyperlinks
 \RequirePackage[framemethod=TikZ]{mdframed}		% Frame text
 \RequirePackage{titletoc}	% Cutomise table of contents
 \RequirePackage{float}		% Define section float type
@@ -65,7 +65,8 @@
 %% Defined Colours
 
 \definecolor{vividgray}{rgb}{0.337,0.325,0.325}		% default text
-\definecolor{vividblue}{rgb}{0.294, 0.737, 0.82}	% sections
+\definecolor{vividred}{rgb}{0.984, 0.396, 0.329}	% sections
+\definecolor{vividorange}{rgb}{0.924, 0.596, 0.429}
 \definecolor{vividlight}{rgb}{0.667, 0.631, 0.635}
 \definecolor{vividbox}{rgb}{0.941, 0.937, 0.937}
 \definecolor{vividlblue}{rgb}{0.843, 0.925, 0.945}
@@ -80,8 +81,8 @@
 %	BoldItalicFont = Roboto-BoldItalic]
 
 \usepackage{xeCJK}
-\setmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{MicrosoftYaHei}
-\setCJKmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{MicrosoftYaHei}\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{STHeiti}
+\setCJKmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{STHeiti}\setCJKsansfont[BoldFont=STHeiti]{CSHeiti}
 \setCJKmonofont{STFangsong}
 
 
@@ -171,7 +172,7 @@
 	\fontsize{50pt}{15pt}%
 	\selectfont}
 \newcommand{\fntdate}{%
-	\color{vividblue}%
+	\color{vividred}%
 	\fontsize{12pt}{0pt}%
 	\selectfont}
 
@@ -202,7 +203,7 @@
 	
 % Section Head
 \newcommand{\fntsection}{%
-	\color{vividblue}%
+	\color{vividred}%
 	\raggedright%
 	\fontsize{24.88pt}{24.88pt}%
 	\selectfont}
@@ -261,7 +262,7 @@
 }
 \cfoot{%
 	\vmiddle{\fntheadfoot%
-	ACM 2012}%
+	SJTU ACM CLASS}%
 }
 \rfoot{%
 	%\vmiddle{\includegraphics[height=0.15in]{img/by-nc-nd}}%
@@ -324,7 +325,7 @@
 	innerbottommargin=0.4in,%
 	skipabove=14pt,%
 	skipbelow=14pt,%
-	backgroundcolor=vividblue,%
+	backgroundcolor=vividred,%
 	linewidth=0pt,%
 }
 
@@ -380,7 +381,7 @@
 \titlecontents{section}%
 	[0.15in]%
 	{}{}{%
-		\color{vividblue}%
+		\color{vividred}%
 		\large$\bullet$%
 		\hspace{0.15in}%
 		\fnttoc%
@@ -423,12 +424,12 @@
 %-------------------------------------
 %% Redefine list environments
 
-\newcommand{\name}{\color{vividblue}}
+\newcommand{\name}{\color{vividorange}}
 
 % Itemize - list with blue bullets
 \renewenvironment{itemize}{%
 	\begin{list}{%
-		\color{vividblue}\large$\bullet$}%
+		\color{vividred}\large$\bullet$}%
 		{\setlength{\topsep}{0pt}%
 			\setlength{\leftmargin}{0.3in}}%
 		\setlength{\labelsep}{0.15in}%
@@ -523,7 +524,7 @@
 	innerbottommargin=0.4in,%
 	skipabove=14pt,%
 	skipbelow=14pt,%
-	backgroundcolor=vividblue,%
+	backgroundcolor=vividred,%
 	linewidth=0pt,%
 	singleextra={
 		\path let \p1 = ($(O)!0.5!(P)$) in%
